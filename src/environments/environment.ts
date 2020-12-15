@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  backendless: {
+    url: `https://api.backendless.com/332D5BD4-56E1-53BE-FFED-BC3B13791F00/5E821146-F8DB-40D5-95F7-FB93121311FC/`,
+    endpoints: {
+      charm: 'data/Charms',
+      ip_addresses: 'data/ip_addresses',
+      bulkUpdateCharms: 'data/bulk/Charms',
+    }
+  },
+  urlIP: `https://api.ipify.org/?format=json`
 };
 
 /*
