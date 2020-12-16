@@ -9,5 +9,15 @@
 .timer span {
   font-size: 26px;
   font-weight: bolder;
-  margin: 0 1px 0 15px;
+  margin-right: 1px;
+}
+
+.timer span:not(:first-child) {
+  margin-left: 15px;
+}
+
+.timer h4{
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
 }
