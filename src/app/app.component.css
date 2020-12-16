@@ -49,7 +49,7 @@
 
 .text-holder {
   overflow: hidden;
-  width: 400px;
+  width: 600px;
   display: block;
   position: absolute;
   top: 50%;
@@ -60,40 +60,29 @@
 .image {
   display: block;
   width: 100%;
-  position: relative;
-  z-index: -1;
 }
 
 .text {
-  font-weight: bolder;
+  width: 90%;
+  padding: 40px 20px;
   font-size: 32px;
   font-family: 'Pacifico', cursive;
+  line-height: 1.5;
   color: rgb(87, 21, 21);
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
-
 
 @media screen and (max-width: 600px) {
-  .main {
-    background: url('../assets/portrait-christmas.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-
-@media screen and (max-width: 400px) {
   .text-holder {
     width: 250px;
   }
 
   .text {
     font-size: 14px;
+    margin-top: 10px;
   }
 
   .btn {
