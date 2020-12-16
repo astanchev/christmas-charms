@@ -48,23 +48,23 @@
 }
 
 .text-holder {
-    overflow: hidden;
-    width: 400px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 400px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.image{
+.image {
   display: block;
   width: 100%;
   position: relative;
   z-index: -1;
 }
 
-.text{
+.text {
   font-weight: bolder;
   font-size: 32px;
   font-family: 'Pacifico', cursive;
@@ -76,18 +76,30 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 400px){
-  .text-holder{
+
+@media screen and (max-width: 600px) {
+  .main {
+    background: url('../assets/portrait-christmas.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .text-holder {
     width: 250px;
   }
 
-  .text{
+  .text {
     font-size: 14px;
   }
 
-  .btn{
+  .btn {
     width: 100px;
     height: 100px;
     font-size: 12px;
   }
+
 }
