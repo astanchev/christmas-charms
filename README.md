@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This app is for choosing a charm for Christmas day. From one IP can be drawn only one charm.
 Demo of the project can be seen [HERE](https://christmas-charms.stackblitz.io)
 
+![Screenshot](https://github.com/astanchev/christmas-charms/blob/master/Screenshot.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
