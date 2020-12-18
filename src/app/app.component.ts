@@ -30,16 +30,19 @@ export class AppComponent {
         switchMap(data => {
           this.ip = data;
           return this.ipService.hasCharm(data);
+        }),
+        tap(_ => {
+          this.charmService
+            .getCharmsCount()
+            .subscribe(count => (this.countCharms = count));
         })
       )
       .subscribe(data => (this.charm = data));
-
-    this.charmService
-      .getCharmsCount()
-      .subscribe(count => (this.countCharms = count));
   }
 
-  getCharm(): void {
+  getCharm(event: any): void {
+    event.target.disabled = true;
+
     this.charmService
       .getCharm(this.countCharms, this.ip)
       .pipe(
