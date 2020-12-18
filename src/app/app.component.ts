@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { zoomInDownOnEnterAnimation } from 'angular-animations';
 import { switchMap, tap } from 'rxjs/operators';
 import { CharmsService } from './core/services/charms.service';
@@ -11,6 +11,8 @@ import { IpService } from './core/services/ip.service';
   animations: [zoomInDownOnEnterAnimation()]
 })
 export class AppComponent {
+  @ViewChild('pushButton', { static: false }) pushButton: ElementRef;
+
   charm = '';
   animationState = false;
   ip: string;
@@ -22,7 +24,8 @@ export class AppComponent {
 
   constructor(
     private charmService: CharmsService,
-    private ipService: IpService
+    private ipService: IpService,
+    private renderer: Renderer2
   ) {
     this.ipService
       .getCurrentIP()
@@ -37,7 +40,12 @@ export class AppComponent {
             .subscribe(count => (this.countCharms = count));
         })
       )
-      .subscribe(data => (this.charm = data));
+      .subscribe(data => {
+        this.charm = data;
+        if (this.hasCharm === false) {
+          this.renderer.setProperty(this.pushButton.nativeElement, 'disabled', false);
+        }
+      });
   }
 
   getCharm(event: any): void {

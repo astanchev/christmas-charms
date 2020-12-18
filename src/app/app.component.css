@@ -42,6 +42,7 @@
 }
 
 .btn:disabled {
+  cursor: default;
   background-color: rgb(121, 121, 121);
   color: rgb(218, 214, 214);
   box-shadow: inset -6px -4px 15px 4px rgba(29, 28, 28, 0.75);

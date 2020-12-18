@@ -9,6 +9,6 @@
   </section>
 
   <section class="button-holder">
-    <button [disabled]="hasCharm" (click)="getCharm($event)" class="btn">PUSH</button>
+    <button #pushButton [disabled]="true" (click)="getCharm($event)" class="btn">PUSH</button>
   </section>
 </section>
